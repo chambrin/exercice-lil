@@ -1,15 +1,7 @@
 const db = require('../libs/database')
 
-// Get all users
-exports.getAllUsers = (req, res) => {
-    db.all('SELECT * FROM users', [], (err, rows) => {
-        if (err) {
-            res.status(500).send('Error querying database')
-            return console.error(err.message)
-        }
-        res.json(rows)
-    })
-}
+
+// TODO Voir tous les utilisateurs
 
 // Crée un nouvel utilisateur
 exports.createUser = (req, res) => {

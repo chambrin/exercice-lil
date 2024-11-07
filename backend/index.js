@@ -9,10 +9,12 @@ const port = 8000;
 app.use(bodyParser.json());
 app.use(cors()); // Enable CORS for all routes
 
-app.get('/users', userController.getAllUsers);
+
+
+// Routing
 app.post('/users', userController.createUser);
-app.get('/posts', postController.getAllPosts);
-app.post('/posts', postController.createPost);
+// TODO : Ajouter une route ici
+
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);

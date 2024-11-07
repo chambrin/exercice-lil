@@ -14,15 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error fetching users:', error));
 
-    // Fetch et affiche les posts
-    fetch('http://localhost:8000/posts')
-        .then(response => response.json())
-        .then(posts => {
-            posts.forEach(post => {
-                const listItem = document.createElement('li');
-                listItem.textContent = `${post.title}: ${post.body}`;
-                postsList.appendChild(listItem);
-            });
-        })
-        .catch(error => console.error('Error fetching posts:', error));
+    // TODO Fetch et affiche les posts
+
 });
