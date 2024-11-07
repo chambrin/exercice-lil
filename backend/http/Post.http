@@ -1,0 +1,12 @@
+### Get all posts
+GET http://localhost:8000/posts
+
+### Create a new post
+POST http://localhost:8000/posts
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "title": "Post 1",
+  "body": "Content 1"
+}
