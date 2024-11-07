@@ -11,7 +11,7 @@ exports.getAllUsers = (req, res) => {
     })
 }
 
-// Create a new user
+// Crée un nouvel utilisateur
 exports.createUser = (req, res) => {
     const { name, email } = req.body
     db.run('INSERT INTO users (name, email) VALUES (?, ?)', [name, email], function(err) {

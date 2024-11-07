@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const usersList = document.getElementById('users');
     const postsList = document.getElementById('posts');
 
-    // Fetch and display users
+    // Fetch et affiche les utilisateurs
     fetch('http://localhost:8000/users')
         .then(response => response.json())
         .then(users => {
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error fetching users:', error));
 
-    // Fetch and display posts
+    // Fetch et affiche les posts
     fetch('http://localhost:8000/posts')
         .then(response => response.json())
         .then(posts => {
