@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error fetching users:', error));
 
+
     // Fetch et affiche les posts
     fetch('http://localhost:8000/posts')
         .then(response => response.json())
