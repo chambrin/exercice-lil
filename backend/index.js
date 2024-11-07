@@ -1,17 +1,19 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-const userController = require('./controller/UserController')
-const postController = require('./controller/PostController')
-const app = express()
-const port = 8000
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors'); // Import the cors package
+const userController = require('./controller/UserController');
+const postController = require('./controller/PostController');
+const app = express();
+const port = 8000;
 
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+app.use(cors()); // Enable CORS for all routes
 
-app.get('/users', userController.getAllUsers)
-app.post('/users', userController.createUser)
-app.get('/posts', postController.getAllPosts)
-app.post('/posts', postController.createPost)
+app.get('/users', userController.getAllUsers);
+app.post('/users', userController.createUser);
+app.get('/posts', postController.getAllPosts);
+app.post('/posts', postController.createPost);
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
-})
+    console.log(`Example app listening on port ${port}`);
+});
